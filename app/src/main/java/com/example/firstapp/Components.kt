@@ -170,9 +170,12 @@ fun DisplayTodoItems(
             .wrapContentHeight()
     ) {
         todoItems.forEach {
-            TodoItem(task = it, removeTask = { task ->
-                removeItems(todoItems - task)
-            })
+            TodoItem(
+                task = it,
+                removeTask = { task ->
+                    removeItems(todoItems - task)
+                }
+            )
         }
     }
 }
